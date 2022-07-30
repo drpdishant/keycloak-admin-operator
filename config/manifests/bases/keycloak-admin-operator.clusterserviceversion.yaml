@@ -1,0 +1,40 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: keycloak-admin-operator.v0.0.1
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions: {}
+  description: Keycloak Operator to perform admin tasks
+  displayName: keycloak-admin-operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: true
+    type: OwnNamespace
+  - supported: true
+    type: SingleNamespace
+  - supported: true
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - keycloak
+  - admin
+  links:
+  - name: Keycloak Admin Operator
+    url: https://keycloak-admin-operator.domain
+  maturity: alpha
+  provider:
+    name: Keycloak
+    url: keycloak.org
+  version: 0.0.1
