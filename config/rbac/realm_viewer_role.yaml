@@ -1,0 +1,20 @@
+# permissions for end users to view realms.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: realm-viewer-role
+rules:
+- apiGroups:
+  - admin.keycloak.org
+  resources:
+  - realms
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - admin.keycloak.org
+  resources:
+  - realms/status
+  verbs:
+  - get

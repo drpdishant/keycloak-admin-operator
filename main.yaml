@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  connection: local
+  vars:
+    auth_secret:
+      name: "example-kc-initial-admin" #"{{ ansible_operator_meta.name }}-secret"
+      namespace: "default" #"{{ansible_operator_meta.namespace }}"
+    auth_keycloak_url: "https://kc.korifi.run"
+    auth_client_id: "admin-cli"
+    auth_realm: master
+    # auth_username: admin
+    # auth_password: 70f9b7840ed149d3b959ca48c0eed98c
+    realm: demo
+  roles:
+  - roles/realm
