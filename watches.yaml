@@ -5,3 +5,7 @@
   kind: Realm
   role: realm
 #+kubebuilder:scaffold:watch
+  finalizer:
+    name: admin.keycloak.org/finalizer
+    vars:
+      state: absent

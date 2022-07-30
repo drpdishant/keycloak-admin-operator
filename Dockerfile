@@ -1,7 +1,10 @@
-FROM quay.io/operator-framework/ansible-operator:v1.22.1
-
+# FROM quay.io/operator-framework/ansible-operator:v1.22.1
+FROM quay.io/operator-framework/ansible-operator-2.11-preview:v1.16
+USER root
+RUN yum install -y git
+USER 1001
 COPY requirements.yml ${HOME}/requirements.yml
-RUN ansible-galaxy install -r ${HOME}/requirements.yml \
+RUN ansible-galaxy collection install -r ${HOME}/requirements.yml \
  && chmod -R ug+rwx ${HOME}/.ansible
 
 COPY watches.yaml ${HOME}/watches.yaml

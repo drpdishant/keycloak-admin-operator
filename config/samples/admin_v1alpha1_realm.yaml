@@ -3,4 +3,10 @@ kind: Realm
 metadata:
   name: realm-sample
 spec:
-  # TODO(user): Add fields here
+  auth_secret:
+    name: "example-kc-initial-admin" #"{{ ansible_operator_meta.name }}-secret"
+    namespace: "default" #"{{ansible_operator_meta.namespace }}"
+  auth_keycloak_url: "https://kc.korifi.run"
+  auth_client_id: "admin-cli"
+  auth_realm: master
+  realm: demo
