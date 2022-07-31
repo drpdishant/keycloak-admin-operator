@@ -54,4 +54,38 @@ rules:
       - patch
       - update
       - watch
+  ##
+  ## Rules for admin.keycloak.org/v1alpha1, Kind: Client
+  ##
+  - apiGroups:
+      - admin.keycloak.org
+    resources:
+      - clients
+      - clients/status
+      - clients/finalizers
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for admin.keycloak.org/v1alpha1, Kind: User
+  ##
+  - apiGroups:
+      - admin.keycloak.org
+    resources:
+      - users
+      - users/status
+      - users/finalizers
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
 #+kubebuilder:scaffold:rules

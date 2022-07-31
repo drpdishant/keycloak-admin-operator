@@ -13,4 +13,18 @@ resources:
   group: admin
   kind: Realm
   version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: keycloak.org
+  group: admin
+  kind: Client
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: keycloak.org
+  group: admin
+  kind: User
+  version: v1alpha1
 version: "3"

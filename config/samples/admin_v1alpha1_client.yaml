@@ -1,0 +1,6 @@
+apiVersion: admin.keycloak.org/v1alpha1
+kind: Client
+metadata:
+  name: client-sample
+spec:
+  # TODO(user): Add fields here

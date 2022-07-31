@@ -4,6 +4,14 @@
   group: admin.keycloak.org
   kind: Realm
   role: realm
+- version: v1alpha1
+  group: admin.keycloak.org
+  kind: Client
+  role: client
+- version: v1alpha1
+  group: admin.keycloak.org
+  kind: User
+  role: user
 #+kubebuilder:scaffold:watch
   finalizer:
     name: admin.keycloak.org/finalizer
