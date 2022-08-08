@@ -1,2 +1,5 @@
 ---
 # defaults file for User
+
+username: null
+userid: null

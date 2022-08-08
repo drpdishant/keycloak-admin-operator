@@ -1,2 +1,14 @@
 ---
 # tasks file for User
+- name: Get Users Info
+  community.general.keycloak_user_info:
+    auth_client_id: "{{auth_client_id}}"
+    auth_keycloak_url: "{{auth_keycloak_url}}"
+    auth_realm: "{{auth_realm}}"
+    auth_username: "{{auth_username}}"
+    auth_password: "{{auth_password}}"
+    realm: "{{realm}}"
+    id : "{{userid}}"
+    name: "{{username}}"
+    validate_certs: "{{validate_certs | default('true')}}"
+  register: keycloak_user_info
