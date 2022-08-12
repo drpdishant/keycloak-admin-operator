@@ -5,3 +5,4 @@ auth_secret:
   namespace: default
 auth_realm: master
 auth_username: admin
+enabled: True

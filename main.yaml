@@ -2,14 +2,31 @@
 - hosts: localhost
   connection: local
   vars:
-    auth_secret:
-      name: "example-kc-initial-admin" #"{{ ansible_operator_meta.name }}-secret"
-      namespace: "default" #"{{ansible_operator_meta.namespace }}"
-    auth_keycloak_url: "https://kc.korifi.run"
+    # auth_secret:
+    #   name: "example-kc-initial-admin" #"{{ ansible_operator_meta.name }}-secret"
+    #   namespace: "default" #"{{ansible_operator_meta.namespace }}"
+    auth_keycloak_url: "http://localhost:8080"
     auth_client_id: "admin-cli"
     auth_realm: master
-    # auth_username: admin
-    # auth_password: 70f9b7840ed149d3b959ca48c0eed98c
+    auth_username: admin
+    auth_password: admin
     realm: demo
+    # userid: "081a12ae-d463-4f63-af37-6dad748e081f"
+    username: "drstrange"
+    email_verified: true
+    email: "drstrange@marvel.com"
+    first_name: "Stephen"
+    last_name: "Strange"
+    state: present
+    groups: 
+      - avengers
+      - spiderman
+      - multiverse-of-madness
+    credentials:
+    - value: "testing@123"
+      type: "password"
+      temporary: False
+      userLabel: "My Password"
+    required_actions: [""]
   roles:
-  - roles/realm
+  - roles/user

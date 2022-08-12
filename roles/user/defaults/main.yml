@@ -3,3 +3,9 @@
 
 username: null
 userid: null
+state: null
+enabled: True
+email_verified: False
+credentials: null
+groups: null
+required_actions: null

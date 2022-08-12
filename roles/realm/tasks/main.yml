@@ -17,5 +17,6 @@
     auth_password: "{{auth_password}}"
     id: "{{realm}}"
     realm: "{{realm}}"
+    enabled: "{{enabled}}"
     state: "{{state}}"
     validate_certs: "{{validate_certs | default('true')}}"
