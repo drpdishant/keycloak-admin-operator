@@ -6,7 +6,9 @@ spec:
   auth_secret:
     name: "example-kc-initial-admin"
     namespace: "default"
-  auth_keycloak_url: "https://kc.korifi.run"
+  auth_keycloak_url: "https://example-kc-service.default.svc.cluster.local:8443"
   auth_client_id: "admin-cli"
   auth_realm: master
   realm: demo
+  validate_certs: false
+  enabled: yes

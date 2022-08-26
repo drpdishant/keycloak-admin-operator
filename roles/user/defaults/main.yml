@@ -6,6 +6,6 @@ userid: null
 state: null
 enabled: True
 email_verified: False
-credentials: null
-groups: null
+credentials: []
+groups: []
 required_actions: null

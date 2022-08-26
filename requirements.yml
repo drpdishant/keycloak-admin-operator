@@ -9,5 +9,5 @@ collections:
   - name: cloud.common
     version: "2.1.1"
   - name: community.general
-    source: "git+https://github.com/drpdishant/community.general.git"
-    type: git
+    source: /home/dishant/Projects/ansible_collections/community/general
+    type: dir
